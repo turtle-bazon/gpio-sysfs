@@ -20,18 +20,18 @@
 
 (defun direction-string (direction)
   (ecase direction
-    :out "out"
-    :in "in"))
+    (:out "out")
+    (:in "in")))
 
 (defun initialize-pin (pin-number direction value)
   (check-gpio-availability)
-  (when (not (probe-file (with-gpio pin-number) ""))
+  (when (not (probe-file (with-gpio pin-number "")))
     (write-to (with-root "export") pin-number))
   (write-to (with-gpio pin-number "direction") (direction-string direction))
   (write-to (with-gpio pin-number "value") value))
 
 (defun shutdown-pin (pin-number)
-  (when (probe-file (with-gpio pin-number) "")
+  (when (probe-file (with-gpio pin-number ""))
     (write-to (with-root "unexport") pin-number)))
 
 (defun write-pin (pin-number value)
