@@ -2,7 +2,7 @@
 
 (in-package :ru.bazon.cl-gpio-sysfs)
 
-(defparameter *gpio-sys-class-root* "/tmp/sys/class/gpio/")
+(defparameter *gpio-sys-class-root* "/sys/class/gpio/")
 
 (defun with-root (branch)
   (concatenate 'string *gpio-sys-class-root* branch))
