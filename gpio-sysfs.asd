@@ -1,7 +1,7 @@
 ;;;; -*- mode: lisp -*-
 
-(defsystem :cl-gpio-sysfs
-    :name "cl-gpio-sysfs"
+(defsystem :gpio-sysfs
+    :name "gpio-sysfs"
     :author "Azamat S. Kalimoulline <turtle@bazon.ru>"
     :licence "Lessor Lisp General Public License"
     :version "0.0.1.0"
