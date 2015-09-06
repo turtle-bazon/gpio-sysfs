@@ -6,4 +6,6 @@
   (:export
    #:initialize-pin
    #:shutdown-pin
-   #:write-pin))
+   #:setup-direction
+   #:set-level
+   #:get-level))
