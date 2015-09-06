@@ -49,11 +49,11 @@
 
 (defun setup-direction (pin-number direction)
   (write-to (with-gpio pin-number "direction") (direction-string direction))
-  :direction)
+  direction)
 
 (defun set-level (pin-number level)
   (write-to (with-gpio pin-number "value") (level-string level))
-  :level)
+  level)
 
 (defun get-level (pin-number)
   (level-value (read-from (with-gpio pin-number "value"))))
